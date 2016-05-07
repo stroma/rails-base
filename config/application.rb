@@ -41,6 +41,7 @@ module RailsBase
         request_specs: false,
         routing_specs: false,
         view_specs: false
+      g.fixture_replacement :factory_girl, dir: 'spec/factories'
     end
 
   end
