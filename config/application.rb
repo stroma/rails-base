@@ -31,5 +31,17 @@ module RailsBase
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
+
+    # Generators
+    config.generators do |g|
+      g.test_framework :rspec,
+        controller_specs: true,
+        fixtures: false,
+        helper_specs: false,
+        request_specs: false,
+        routing_specs: false,
+        view_specs: false
+    end
+
   end
 end
